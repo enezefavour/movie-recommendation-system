@@ -41,3 +41,21 @@ Run:
 _Please update the requirements.txt file when you add a new package_
 
 Run `pip freeze` and copy the content of the output to the `requirements.txt` file
+
+### Download Datasets
+
+Run the download script to download the datasets zip file.
+
+Run:
+
+> `python data/download.py`
+
+Or
+
+> `python data/download.py small`
+
+_Downloads the small datasets file, ml-latest-small.zip (1MB)_
+
+> `python data/download.py large`
+
+_Downloads the large datasets file ml-latest.zip (256MB)_
