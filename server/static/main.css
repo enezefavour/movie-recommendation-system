@@ -1,0 +1,44 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+p {
+  margin-top: 0;
+}
+
+.header {
+  background: url("../static/images/hero_bg.jpg") no-repeat,
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 70%
+    );
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fafafa;
+}
+
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.heading {
+  font-size: larger;
+}

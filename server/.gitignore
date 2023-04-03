@@ -160,5 +160,4 @@ cython_debug/
 #.idea/
 
 # Dataset File
-data/ml-latest-small.zip
-data/ml-latest.zip
+data/ml-*
