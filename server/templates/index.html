@@ -12,17 +12,48 @@
     />
   </head>
   <body>
+    <nav class="navbar">
+      <a href="/" class="logo">Uflix</a>
+    </nav>
     <header class="header">
       <div class="container">
-        <h1>Unlimited Movies</h1>
-        <p>
-          Ready to watch? Enter your email to create or restart your membership.
-        </p>
-        <form action="">
-          <input type="search" name="search" id="search" />
-          <button type="submit">Search</button>
-        </form>
+        <div class="header-container">
+          <h1 class="heading">Unlimited Movies</h1>
+          <p>Ready to watch?</p>
+          <p>Enter a movie title to search for your favourite movies.</p>
+          <form id="search-form" action="/recommendation" method="POST">
+            <div class="search-container">
+              <input
+                type="search"
+                name="search"
+                id="search"
+                placeholder="Search by movie title"
+              />
+            </div>
+            <small>Press Enter to Search</small>
+            <!-- <button type="submit">Search</button> -->
+          </form>
+        </div>
       </div>
     </header>
+    {% if status %}
+    <div id="recommendations" class="container">
+      <nav class="result-navbar">
+        <a href="/">All</a>
+        <a href="/">Recommended</a>
+      </nav>
+      <div class="movies-container">
+        {% for movie in recommendations[0:10] %}
+        <div class="movie">
+          <img src={{"https://image.tmdb.org/t/p/original" + movie.poster_path}}
+          alt={{ movie.title}} width="200px" height="200px">
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2023 CSC 407 - Group 4</p>
+    </footer>
+    {% endif %}
   </body>
 </html>
